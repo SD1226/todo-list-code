@@ -1,0 +1,268 @@
+@font-face
+{
+	font-family:'oldeenglish';
+	src:url('fonts/OldeEnglish.woff'),
+	    url('fonts/OldeEnglish.ttf');
+}
+@font-face
+{
+	font-family:'lucida';
+	src:url('fonts/Lucida Handwriting Italic.woff'),
+	    url('fonts/Lucida Handwriting Italic.ttf');
+}
+@font-face
+{
+	font-family:'museoslab';
+	src:url('fonts/Museo_Slab.woff'),
+	    url('fonts/Museo_Slab.ttf');
+}
+html
+{
+height:100%;
+}
+body
+{
+margin:0;
+padding:0;
+}
+#header
+{
+	width:100vw;
+	height:25vh;
+	box-sizing:border-box;
+	background-color:rgb(90,190,120);
+	font-size:10vh;
+	padding:1vh;
+	padding-left:22vw;
+	color:rgb(45,60,95);
+	font-family:oldeenglish;
+}
+#dd
+{
+	box-sizing:border-box;
+	height:8vh;
+	width:15vw;
+	border-radius:1.2vh;
+	position:absolute;
+	top:2vh;
+	left:2vh;
+} 
+#dBar
+{
+	height:75vh;
+	width:60vw;
+	position:fixed;
+	top:25vh;
+	left:0px;
+	background-color:rgba(100,100,100,0.85);
+	box-sizing:border-box;
+	z-index:1;
+	display:none;
+	color:white;
+	font-size:4.5vh;
+	padding:2vh;
+	overflow-wrap:break-word;
+	font-family:museoslab;
+}
+#user
+{
+	font-size:6vh;
+	color:rgb(200,250,210);
+}
+#content
+{
+	width:100vw;
+	height:75vh;
+	box-sizing:border-box;
+	overflow-y:auto;
+	overflow-x:hidden;
+	background-color:white;
+	padding-bottom:15vh;
+}
+.todo
+{
+	width:100vw;
+	min-height:20vh;
+	box-sizing:border-box;
+	border-bottom:0.2vh solid black;
+	font-size:4vh;
+	position:relative;
+	overflow:hidden;
+}
+#add
+{
+	height:10vh;
+	width:10vh;
+	text-align:center;
+	font-size:8vh;
+	border-radius:5vh;
+	border:0.5vh outset rgb(60,125,80);
+	background-color:rgb(90,190,120);
+	position:fixed;
+	bottom:2vh;
+	right:2vh;
+}
+#add:focus
+{
+	outline:none;
+	border-style:inset;
+}
+a:link, a:visited
+{
+	color:white;
+	text-decoration:none;
+}
+a:hover
+{
+	color:yellow;
+}
+a:active
+{
+	text-decoration:underline;
+}
+/****************************************************************************************/
+.tcont
+{
+	width:70vw;
+	height:11vh;
+	box-sizing:border-box;
+	font-size:4vh;
+	position:absolute;
+	left:1vh;
+	top:1vh;
+	resize:none;
+}
+.date
+{
+	width:70vw;
+	height:5vh;
+	box-sizing:border-box;	
+	font-size:3.2vh;
+	position:absolute;
+	left:1vh;
+	top:14vh;
+}
+.save, .cancel
+{
+	height:5vh;
+	width:11vh;
+	box-sizing:border-box;
+	position:absolute;
+	font-size:2.6vh;
+	top:1.5vh;
+	left:75vw;
+	
+}
+.cancel
+{
+	top:12vh;
+}
+/*********************************************************************/
+.work
+{
+	width:100%;
+	min-height:10vh;
+	box-sizing:border-box;
+	overflow:auto;
+	overflow-wrap:break-word;
+	font-family:lucida;
+}	
+.del
+{
+	width:10vh;
+    height:10vh;
+	box-sizing:border-box;
+	float:right;
+	border:0.2vh solid grey;
+	border-radius:1vh;
+	margin:1.5vh;
+	background-image:url(can.png);
+	background-size:100% 100%;
+}
+.tick
+{
+	width:6vh;
+    height:6vh;
+	box-sizing:border-box;
+	float:left;
+	border:0.2vh solid grey;
+	border-radius:3vh;
+	margin:1vh;
+	background-image:none;
+	background-size:100% 100%;
+}
+.tick:focus
+{
+	outline:none;
+}
+.mdate, .ddate
+{
+	width:100%;
+	height:5vh;
+	border-top:0.1vh solid grey;
+	box-sizing:border-box;
+	font-size:2.5vh;
+	padding:1vh;
+	font-family:museoslab;
+	float:left;
+}
+.mdate
+{
+	color:rgb(150,80,150);
+}
+@media only screen and (min-width:500px)
+{
+	#header
+	{
+		padding-left:2vw;
+	}
+	#dd
+	{
+		display:none;
+	}
+	#dBar
+	{
+		display:block;
+		width:30vw;
+	}
+	#content
+	{
+		width:70vw;
+		position:relative;
+		left:30vw;
+	}
+	.todo
+	{
+		width:70vw;
+		min-height:15vh;
+		overflow:hidden;
+	}
+	/*******************************************************/
+	.tcont
+	{
+		height:6vh;
+		width:55vw;
+	}
+	.date
+	{
+		width:55vw;
+		top:8vh;
+	}
+	.save, .cancel
+	{
+		left:58vw;
+	}
+	.cancel
+	{
+		top:8vh;
+	}
+	/****************************************************/
+	.mdate, .ddate
+	{
+		width:50%;
+	}
+	.mdate
+	{
+		border-right:0.1vh solid grey;
+	}
+}
